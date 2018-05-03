@@ -1,0 +1,72 @@
+MapSMtoCores SM 3.5 is undefined (please update to the latest SDK)!
+Found 2 devices, using device 0 (Tesla K20m), compute capability 3.5, cores 13*-1.
+No of CPUs 32
+arguments: /media/Seagate/MARS/Ashirbad/input_graphs/USA.CTR.edges 16
+Calling graph.read(inputfile, weighted);
+
+Num of nodes 14081816
+Num of edges 34292496
+	  1%	 20%	 40%	 60%	 80%	100%Max Degree is 9
+/home/iresh/parallel_graph_alg_madduri_modified/input/cpupart.grspec
+Calling fillBorderAndCount()
+nedges : 34292496
+Partition Counts:
+[0]Total nodes: 2040478 Border nodes: 86 Edges: 4989484
+[1]Total nodes: 12041338 Border nodes: 87 Edges: 29302838
+Eedge cut: 174
+fillBorderAndCount() over. Calling graph.formDevicePartitions()
+numNodes[0] = 2040565
+numEdges[0] = 4989658, edgeCount = 4989484, edgeCut = 174
+numNodes[1] = 12041424
+numEdges[1] = 29303012, edgeCount = 29302838, edgeCut = 174
+Make CPU Part graph 4989658
+Graph nnodes is : 14081816
+max node count: 12041424
+max edge count: 29303012
+GPU backward phase #blocks 28617, #blocksize 1024
+num edges of CPU PARTITION: 4989658
+CPU Border Matrix runtime = 8369.552 ms
+
+ GPU border Matrix completion runtime = 18207.960 ms
+
+Initialization Runtime = 46527.065 ms
+
+Iteration# 0
+Init_time = 28.882 ms
+
+Source 3985992 in CPU Partition
+For CPU BFS runtime = 74.124 ms
+
+SS-BFS_time = 77.726 ms
+[CPU] Set dist to MYINFINITY
+[CPU] Gonna create SSSP thread
+[CPU] SSSP started
+
+End of SSSP step: Runtime = 31.624 ms
+
+Source : 3985992
+[GPU] Done MultiS
+
+End of SSSP+MultiS step: Runtime = 195.726 ms
+SSSP bbye
+SSSP thread joined
+
+Forward Phase Runtime = 459.873 ms
+Enter source : eligible count = 14081816GPU count = 12041338
+ mytime = 21724.112 ms
+***FORWARD PHASE Runtime =  459.873 ms ***:-
+ cpu F_I runtime = 74.124 ms
+ gpu F_I runtime = 0.000 ms
+ cpu F_R runtime = 0.000 ms
+ gpu F_R runtime = 0.000 ms
+ MAX F_R runtime = 0.000 ms
+ cpu total forward runtime = 74.124 ms
+ gpu total forward runtime = 0.000 ms
+CPU Util=16.118 GPU Util=0.000
+***Iterative step runtime = 0.000 ms***
+***BACKWARD PHASE Runtime =  0.000 ms ***:-
+ cpu Total backward runtime = 0.000 ms ; kernel time = 0.000 ms
+ gpu Total backward runtime = 0.000 ms ; kernel time = 0.000 ms
+cudaMemcpy Time = 0.000 ms***
+CPU Util=-nan GPU Util=-nan
+***Total Final runtime = 21724.126 ms***
